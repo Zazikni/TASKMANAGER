@@ -27,9 +27,10 @@ namespace TASKMANAGER
         }
         private void buttonRegistration_Click(object sender, EventArgs e)
         {
+            ProgramUser newUser = new ProgramUser(textBoxRegFName.Text, textBoxRegSName.Text, textBoxRegSurname.Text, textBoxRegLogin.Text, textBoxRegPass.Text);
             using (StreamWriter file = new StreamWriter(@"users.txt", true))
             {
-                file.WriteLine($"{textBoxRegFName.Text} {textBoxRegSName.Text} {textBoxRegSurname.Text} {textBoxRegLogin.Text} {textBoxRegPass.Text}");
+                file.WriteLine(newUser.ToString());
             }
         }
     }

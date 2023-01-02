@@ -16,7 +16,7 @@ namespace TASKMANAGER
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new registrationForm());
+            Application.Run(new authorizeForm());
             
         }
         static public ProgramUser currentUser; // текуший пользователь программы

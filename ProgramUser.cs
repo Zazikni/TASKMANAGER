@@ -12,9 +12,9 @@ namespace TASKMANAGER
     {
 
         private int userId;
-        public string userFirstName;
-        public string userSecondName;
-        public string userSurname;
+        private string userFirstName;
+        private string userSecondName;
+        private string userSurname;
         private string login;
         private string password;
 
@@ -36,6 +36,17 @@ namespace TASKMANAGER
 
 
         }
+        public ProgramUser(int UserId , string UserFirstName, string UserSecondName, string UserSurname, string Login, string Password)
+        {
+            userFirstName = UserFirstName;
+            userSecondName = UserSecondName;
+            userSurname = UserSurname;
+            login = Login;
+            password = Password;
+            userId = UserId;
+
+
+        }
         public string Login
         {
             get { return login; }
@@ -46,9 +57,25 @@ namespace TASKMANAGER
             get { return password; }
             set { password = value; }
         }
+        public int UserId 
+        { 
+            get { return userId; }
+        }
+        public string UserFirstName
+        {
+            get { return userFirstName; }
+        }
+        public string UserSecondName
+        {
+            get { return userSecondName; }
+        }
+        public string UserSurname
+        {
+            get { return userSurname; }
+        }
         public override string ToString()
         {
-            return $"{userId} {userFirstName} {userSecondName} {userSurname}";
+            return $"{userId} {userFirstName} {userSecondName} {userSurname} {login} {password}";
         }
 
 
