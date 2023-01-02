@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.groupBoxRegistration = new System.Windows.Forms.GroupBox();
+            this.labelRegFName = new System.Windows.Forms.Label();
+            this.textBoxRegFName = new System.Windows.Forms.TextBox();
+            this.labelRegSName = new System.Windows.Forms.Label();
+            this.textBoxRegSName = new System.Windows.Forms.TextBox();
+            this.labelRegSurname = new System.Windows.Forms.Label();
+            this.textBoxRegSurname = new System.Windows.Forms.TextBox();
             this.buttonRegistration = new System.Windows.Forms.Button();
             this.labelRegPass = new System.Windows.Forms.Label();
             this.labelRegLogin = new System.Windows.Forms.Label();
             this.textBoxRegPass = new System.Windows.Forms.TextBox();
             this.textBoxRegLogin = new System.Windows.Forms.TextBox();
-            this.labelRegSurname = new System.Windows.Forms.Label();
-            this.textBoxRegSurname = new System.Windows.Forms.TextBox();
-            this.labelRegSName = new System.Windows.Forms.Label();
-            this.textBoxRegSName = new System.Windows.Forms.TextBox();
-            this.labelRegFName = new System.Windows.Forms.Label();
-            this.textBoxRegFName = new System.Windows.Forms.TextBox();
             this.groupBoxRegistration.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +65,54 @@
             this.groupBoxRegistration.TabIndex = 1;
             this.groupBoxRegistration.TabStop = false;
             // 
+            // labelRegFName
+            // 
+            this.labelRegFName.AutoSize = true;
+            this.labelRegFName.Location = new System.Drawing.Point(167, 52);
+            this.labelRegFName.Name = "labelRegFName";
+            this.labelRegFName.Size = new System.Drawing.Size(29, 13);
+            this.labelRegFName.TabIndex = 10;
+            this.labelRegFName.Text = "Имя";
+            // 
+            // textBoxRegFName
+            // 
+            this.textBoxRegFName.Location = new System.Drawing.Point(92, 68);
+            this.textBoxRegFName.Name = "textBoxRegFName";
+            this.textBoxRegFName.Size = new System.Drawing.Size(179, 20);
+            this.textBoxRegFName.TabIndex = 9;
+            // 
+            // labelRegSName
+            // 
+            this.labelRegSName.AutoSize = true;
+            this.labelRegSName.Location = new System.Drawing.Point(153, 91);
+            this.labelRegSName.Name = "labelRegSName";
+            this.labelRegSName.Size = new System.Drawing.Size(56, 13);
+            this.labelRegSName.TabIndex = 8;
+            this.labelRegSName.Text = "Фамилия";
+            // 
+            // textBoxRegSName
+            // 
+            this.textBoxRegSName.Location = new System.Drawing.Point(92, 107);
+            this.textBoxRegSName.Name = "textBoxRegSName";
+            this.textBoxRegSName.Size = new System.Drawing.Size(179, 20);
+            this.textBoxRegSName.TabIndex = 7;
+            // 
+            // labelRegSurname
+            // 
+            this.labelRegSurname.AutoSize = true;
+            this.labelRegSurname.Location = new System.Drawing.Point(154, 130);
+            this.labelRegSurname.Name = "labelRegSurname";
+            this.labelRegSurname.Size = new System.Drawing.Size(54, 13);
+            this.labelRegSurname.TabIndex = 6;
+            this.labelRegSurname.Text = "Отчество";
+            // 
+            // textBoxRegSurname
+            // 
+            this.textBoxRegSurname.Location = new System.Drawing.Point(92, 146);
+            this.textBoxRegSurname.Name = "textBoxRegSurname";
+            this.textBoxRegSurname.Size = new System.Drawing.Size(179, 20);
+            this.textBoxRegSurname.TabIndex = 5;
+            // 
             // buttonRegistration
             // 
             this.buttonRegistration.Location = new System.Drawing.Point(116, 268);
@@ -73,6 +121,7 @@
             this.buttonRegistration.TabIndex = 4;
             this.buttonRegistration.Text = "Зарегистрироваться";
             this.buttonRegistration.UseVisualStyleBackColor = true;
+            this.buttonRegistration.Click += new System.EventHandler(this.buttonRegistration_Click);
             // 
             // labelRegPass
             // 
@@ -105,54 +154,6 @@
             this.textBoxRegLogin.Name = "textBoxRegLogin";
             this.textBoxRegLogin.Size = new System.Drawing.Size(179, 20);
             this.textBoxRegLogin.TabIndex = 0;
-            // 
-            // labelRegSurname
-            // 
-            this.labelRegSurname.AutoSize = true;
-            this.labelRegSurname.Location = new System.Drawing.Point(154, 130);
-            this.labelRegSurname.Name = "labelRegSurname";
-            this.labelRegSurname.Size = new System.Drawing.Size(54, 13);
-            this.labelRegSurname.TabIndex = 6;
-            this.labelRegSurname.Text = "Отчество";
-            // 
-            // textBoxRegSurname
-            // 
-            this.textBoxRegSurname.Location = new System.Drawing.Point(92, 146);
-            this.textBoxRegSurname.Name = "textBoxRegSurname";
-            this.textBoxRegSurname.Size = new System.Drawing.Size(179, 20);
-            this.textBoxRegSurname.TabIndex = 5;
-            // 
-            // labelRegSName
-            // 
-            this.labelRegSName.AutoSize = true;
-            this.labelRegSName.Location = new System.Drawing.Point(153, 91);
-            this.labelRegSName.Name = "labelRegSName";
-            this.labelRegSName.Size = new System.Drawing.Size(56, 13);
-            this.labelRegSName.TabIndex = 8;
-            this.labelRegSName.Text = "Фамилия";
-            // 
-            // textBoxRegSName
-            // 
-            this.textBoxRegSName.Location = new System.Drawing.Point(92, 107);
-            this.textBoxRegSName.Name = "textBoxRegSName";
-            this.textBoxRegSName.Size = new System.Drawing.Size(179, 20);
-            this.textBoxRegSName.TabIndex = 7;
-            // 
-            // labelRegFName
-            // 
-            this.labelRegFName.AutoSize = true;
-            this.labelRegFName.Location = new System.Drawing.Point(167, 52);
-            this.labelRegFName.Name = "labelRegFName";
-            this.labelRegFName.Size = new System.Drawing.Size(29, 13);
-            this.labelRegFName.TabIndex = 10;
-            this.labelRegFName.Text = "Имя";
-            // 
-            // textBoxRegFName
-            // 
-            this.textBoxRegFName.Location = new System.Drawing.Point(92, 68);
-            this.textBoxRegFName.Name = "textBoxRegFName";
-            this.textBoxRegFName.Size = new System.Drawing.Size(179, 20);
-            this.textBoxRegFName.TabIndex = 9;
             // 
             // registrationForm
             // 

@@ -12,11 +12,15 @@ namespace TASKMANAGER
         /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
-        static void Main()
+        public static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new authorizeForm());
+            Application.Run(new registrationForm());
+            
         }
+        static public ProgramUser currentUser; // текуший пользователь программы
+        static public ProgramUser [] AllCurrentUser; // список всех пользователей для авторизации и назначения
+
     }
 }

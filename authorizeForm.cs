@@ -16,5 +16,10 @@ namespace TASKMANAGER
         {
             InitializeComponent();
         }
+
+        private void buttonAuthorize_Click(object sender, EventArgs e)
+        {
+            //TASKMANAGER.Program.currentUser = new ProgramUser();
+        }
     }
 }

@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBoxAuthorize = new System.Windows.Forms.GroupBox();
-            this.textBoxAuthLogin = new System.Windows.Forms.TextBox();
-            this.textBoxAuthPass = new System.Windows.Forms.TextBox();
-            this.labelAuthLogin = new System.Windows.Forms.Label();
-            this.labelAuthPass = new System.Windows.Forms.Label();
             this.buttonAuthorize = new System.Windows.Forms.Button();
+            this.labelAuthPass = new System.Windows.Forms.Label();
+            this.labelAuthLogin = new System.Windows.Forms.Label();
+            this.textBoxAuthPass = new System.Windows.Forms.TextBox();
+            this.textBoxAuthLogin = new System.Windows.Forms.TextBox();
             this.groupBoxAuthorize.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,28 +53,15 @@
             this.groupBoxAuthorize.TabIndex = 0;
             this.groupBoxAuthorize.TabStop = false;
             // 
-            // textBoxAuthLogin
+            // buttonAuthorize
             // 
-            this.textBoxAuthLogin.Location = new System.Drawing.Point(103, 111);
-            this.textBoxAuthLogin.Name = "textBoxAuthLogin";
-            this.textBoxAuthLogin.Size = new System.Drawing.Size(179, 20);
-            this.textBoxAuthLogin.TabIndex = 0;
-            // 
-            // textBoxAuthPass
-            // 
-            this.textBoxAuthPass.Location = new System.Drawing.Point(102, 161);
-            this.textBoxAuthPass.Name = "textBoxAuthPass";
-            this.textBoxAuthPass.Size = new System.Drawing.Size(179, 20);
-            this.textBoxAuthPass.TabIndex = 1;
-            // 
-            // labelAuthLogin
-            // 
-            this.labelAuthLogin.AutoSize = true;
-            this.labelAuthLogin.Location = new System.Drawing.Point(173, 95);
-            this.labelAuthLogin.Name = "labelAuthLogin";
-            this.labelAuthLogin.Size = new System.Drawing.Size(38, 13);
-            this.labelAuthLogin.TabIndex = 2;
-            this.labelAuthLogin.Text = "Логин";
+            this.buttonAuthorize.Location = new System.Drawing.Point(156, 204);
+            this.buttonAuthorize.Name = "buttonAuthorize";
+            this.buttonAuthorize.Size = new System.Drawing.Size(75, 23);
+            this.buttonAuthorize.TabIndex = 4;
+            this.buttonAuthorize.Text = "Войти";
+            this.buttonAuthorize.UseVisualStyleBackColor = true;
+            this.buttonAuthorize.Click += new System.EventHandler(this.buttonAuthorize_Click);
             // 
             // labelAuthPass
             // 
@@ -85,14 +72,28 @@
             this.labelAuthPass.TabIndex = 3;
             this.labelAuthPass.Text = "Пароль";
             // 
-            // buttonAuthorize
+            // labelAuthLogin
             // 
-            this.buttonAuthorize.Location = new System.Drawing.Point(156, 204);
-            this.buttonAuthorize.Name = "buttonAuthorize";
-            this.buttonAuthorize.Size = new System.Drawing.Size(75, 23);
-            this.buttonAuthorize.TabIndex = 4;
-            this.buttonAuthorize.Text = "Войти";
-            this.buttonAuthorize.UseVisualStyleBackColor = true;
+            this.labelAuthLogin.AutoSize = true;
+            this.labelAuthLogin.Location = new System.Drawing.Point(173, 95);
+            this.labelAuthLogin.Name = "labelAuthLogin";
+            this.labelAuthLogin.Size = new System.Drawing.Size(38, 13);
+            this.labelAuthLogin.TabIndex = 2;
+            this.labelAuthLogin.Text = "Логин";
+            // 
+            // textBoxAuthPass
+            // 
+            this.textBoxAuthPass.Location = new System.Drawing.Point(102, 161);
+            this.textBoxAuthPass.Name = "textBoxAuthPass";
+            this.textBoxAuthPass.Size = new System.Drawing.Size(179, 20);
+            this.textBoxAuthPass.TabIndex = 1;
+            // 
+            // textBoxAuthLogin
+            // 
+            this.textBoxAuthLogin.Location = new System.Drawing.Point(103, 111);
+            this.textBoxAuthLogin.Name = "textBoxAuthLogin";
+            this.textBoxAuthLogin.Size = new System.Drawing.Size(179, 20);
+            this.textBoxAuthLogin.TabIndex = 0;
             // 
             // authorizeForm
             // 
