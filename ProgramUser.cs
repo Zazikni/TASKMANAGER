@@ -11,30 +11,46 @@ namespace TASKMANAGER
     internal class ProgramUser
     {
 
-        private int UserId;
-        public string UserFirstName;
-        public string UserSecondName;
-        public string UserSurname;
-        private string Login { get; set; }
-        private string Password { get; set; }
-       
-        public ProgramUser(string userFirstName, string userSecondName, string userSurname, string login, string password)
+        private int userId;
+        public string userFirstName;
+        public string userSecondName;
+        public string userSurname;
+        private string login;
+        private string password;
+
+        public ProgramUser(string UserFirstName, string UserSecondName, string UserSurname, string Login, string Password)
         {
-            UserFirstName = userFirstName;
-            UserSecondName = userSecondName;
-            UserSurname = userSurname;
-            Login = login;
-            Password = password;
-            using (StreamReader file = new StreamReader(@"nextId"))
+            userFirstName = UserFirstName;
+            userSecondName = UserSecondName;
+            userSurname = UserSurname;
+            login = Login;
+            password = Password;
+            using (StreamReader file = new StreamReader(@"nextId.txt"))
             {
-                UserId = Convert.ToInt32(file.ReadLine());
+                userId = Convert.ToInt32(file.ReadLine());
             }
-            using (StreamWriter file = new StreamWriter(@"nextId", false))
+            using (StreamWriter file = new StreamWriter(@"nextId.txt", false))
             {
-                file.Write(UserId++);
+                file.Write(++userId);
             }
 
 
         }
+        public string Login
+        {
+            get { return login; }
+            set { login = value; }
+        }
+        public string Password
+        {
+            get { return password; }
+            set { password = value; }
+        }
+        public override string ToString()
+        {
+            return $"{userId} {userFirstName} {userSecondName} {userSurname}";
+        }
+
+
     }
 }
