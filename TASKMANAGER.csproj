@@ -101,6 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="nextId.txt" />
+    <Content Include="nextTaskId.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
