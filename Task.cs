@@ -11,28 +11,36 @@ namespace TASKMANAGER
     {
         private int taskId;
         private string taskDescription;
-        private string taskStatus;
-        private string taskOwner;
-        private string taskCreator;
-        public Task (string TaskDescription, string TaskStatus , string TaskOwner, string TaskCreator)
+        private bool taskStatus;
+        private int taskOwner;
+        private int taskCreator;
+        public Task(string TaskDescription, bool TaskStatus, int TaskOwner, int TaskCreator)
         {
             taskDescription = TaskDescription;
             taskStatus = TaskStatus;
             taskOwner = TaskOwner;
             taskCreator = TaskCreator;
-            using (StreamReader file = new StreamReader(@"nextTaskIdId.txt"))
+            using (StreamReader file = new StreamReader(@"nextTaskId.txt"))
             {
                 taskId = Convert.ToInt32(file.ReadLine());
             }
-            using (StreamWriter file = new StreamWriter(@"nextTaskIdId.txt", false))
+            using (StreamWriter file = new StreamWriter(@"nextTaskId.txt", false))
             {
                 file.Write(++taskId);
             }
         }
-        public string TaskStatus
+        public bool TaskStatus
         {
             get { return taskStatus; }
             set { taskStatus = value; }
+        }
+        public int TaskId
+        {
+            get { return taskId; }
+        }
+        public int TaskOwner
+        {
+            get { return taskOwner; }
         }
         public override string ToString()
         {
