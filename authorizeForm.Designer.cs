@@ -34,6 +34,7 @@
             this.labelAuthLogin = new System.Windows.Forms.Label();
             this.textBoxAuthPass = new System.Windows.Forms.TextBox();
             this.textBoxAuthLogin = new System.Windows.Forms.TextBox();
+            this.buttonRegistration = new System.Windows.Forms.Button();
             this.groupBoxAuthorize.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,6 +43,7 @@
             this.groupBoxAuthorize.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxAuthorize.Controls.Add(this.buttonRegistration);
             this.groupBoxAuthorize.Controls.Add(this.buttonAuthorize);
             this.groupBoxAuthorize.Controls.Add(this.labelAuthPass);
             this.groupBoxAuthorize.Controls.Add(this.labelAuthLogin);
@@ -55,9 +57,9 @@
             // 
             // buttonAuthorize
             // 
-            this.buttonAuthorize.Location = new System.Drawing.Point(156, 204);
+            this.buttonAuthorize.Location = new System.Drawing.Point(129, 203);
             this.buttonAuthorize.Name = "buttonAuthorize";
-            this.buttonAuthorize.Size = new System.Drawing.Size(75, 23);
+            this.buttonAuthorize.Size = new System.Drawing.Size(128, 23);
             this.buttonAuthorize.TabIndex = 4;
             this.buttonAuthorize.Text = "Войти";
             this.buttonAuthorize.UseVisualStyleBackColor = true;
@@ -95,6 +97,17 @@
             this.textBoxAuthLogin.Size = new System.Drawing.Size(179, 20);
             this.textBoxAuthLogin.TabIndex = 0;
             // 
+            // buttonRegistration
+            // 
+            this.buttonRegistration.Location = new System.Drawing.Point(129, 232);
+            this.buttonRegistration.Name = "buttonRegistration";
+            this.buttonRegistration.Size = new System.Drawing.Size(128, 23);
+            this.buttonRegistration.TabIndex = 5;
+            this.buttonRegistration.Text = "Зарегистрироваться";
+            this.buttonRegistration.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonRegistration.UseVisualStyleBackColor = true;
+            this.buttonRegistration.Click += new System.EventHandler(this.buttonRegistration_Click);
+            // 
             // authorizeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,9 +128,10 @@
         private System.Windows.Forms.GroupBox groupBoxAuthorize;
         private System.Windows.Forms.Button buttonAuthorize;
         private System.Windows.Forms.Label labelAuthPass;
-        private System.Windows.Forms.Label labelAuthLogin;
         private System.Windows.Forms.TextBox textBoxAuthPass;
         private System.Windows.Forms.TextBox textBoxAuthLogin;
+        private System.Windows.Forms.Button buttonRegistration;
+        public System.Windows.Forms.Label labelAuthLogin;
     }
 }
 

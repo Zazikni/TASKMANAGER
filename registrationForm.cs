@@ -32,6 +32,7 @@ namespace TASKMANAGER
             {
                 file.WriteLine(newUser.ToString());
             }
+            TextBoxClean();
         }
     }
 }

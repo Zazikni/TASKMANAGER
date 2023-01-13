@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,10 +18,33 @@ namespace TASKMANAGER
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new authorizeForm());
-            
+            //Application.Run(new registrationForm());
+
         }
         static public ProgramUser currentUser; // текуший пользователь программы
         static public ProgramUser [] AllCurrentUser; // список всех пользователей для авторизации и назначения
+        static public void usersListLoading()
+        {
+            // прогружаем в кучу информацию о пользователях
+            Program.AllCurrentUser = new ProgramUser[50];
+            using (StreamReader file = new StreamReader(@"users.txt"))
+            {
+                string line;
+                int i = 0;
+                while ((line = file.ReadLine()) != null)
+                {
+                    string[] linemass = line.Split(' ');
+                    Program.AllCurrentUser[i] = new ProgramUser(Convert.ToInt32(linemass[0]), linemass[1], linemass[2], linemass[3], linemass[4], linemass[5]);
+                    i++;
+                }
+            }
+
+        }
+
+
+
+
+
 
     }
 }
