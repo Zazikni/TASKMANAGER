@@ -23,9 +23,12 @@ namespace TASKMANAGER
         }
         static public ProgramUser currentUser; // текуший пользователь программы
         static public ProgramUser [] AllCurrentUser; // список всех пользователей для авторизации и назначения
+
+
+        // выгружает из файла данные пользователей 
         static public void usersListLoading()
         {
-            // прогружаем в кучу информацию о пользователях
+            
             Program.AllCurrentUser = new ProgramUser[50];
             using (StreamReader file = new StreamReader(@"users.txt"))
             {

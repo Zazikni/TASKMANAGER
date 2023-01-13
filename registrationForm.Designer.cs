@@ -48,6 +48,7 @@
             this.groupBoxRegistration.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxRegistration.AutoSize = true;
             this.groupBoxRegistration.Controls.Add(this.labelRegFName);
             this.groupBoxRegistration.Controls.Add(this.textBoxRegFName);
             this.groupBoxRegistration.Controls.Add(this.labelRegSName);
@@ -59,16 +60,16 @@
             this.groupBoxRegistration.Controls.Add(this.labelRegLogin);
             this.groupBoxRegistration.Controls.Add(this.textBoxRegPass);
             this.groupBoxRegistration.Controls.Add(this.textBoxRegLogin);
-            this.groupBoxRegistration.Location = new System.Drawing.Point(211, 65);
+            this.groupBoxRegistration.Location = new System.Drawing.Point(109, 47);
             this.groupBoxRegistration.Name = "groupBoxRegistration";
-            this.groupBoxRegistration.Size = new System.Drawing.Size(378, 321);
+            this.groupBoxRegistration.Size = new System.Drawing.Size(446, 359);
             this.groupBoxRegistration.TabIndex = 1;
             this.groupBoxRegistration.TabStop = false;
             // 
             // labelRegFName
             // 
             this.labelRegFName.AutoSize = true;
-            this.labelRegFName.Location = new System.Drawing.Point(167, 52);
+            this.labelRegFName.Location = new System.Drawing.Point(209, 49);
             this.labelRegFName.Name = "labelRegFName";
             this.labelRegFName.Size = new System.Drawing.Size(29, 13);
             this.labelRegFName.TabIndex = 10;
@@ -76,7 +77,7 @@
             // 
             // textBoxRegFName
             // 
-            this.textBoxRegFName.Location = new System.Drawing.Point(92, 68);
+            this.textBoxRegFName.Location = new System.Drawing.Point(134, 65);
             this.textBoxRegFName.Name = "textBoxRegFName";
             this.textBoxRegFName.Size = new System.Drawing.Size(179, 20);
             this.textBoxRegFName.TabIndex = 9;
@@ -84,7 +85,7 @@
             // labelRegSName
             // 
             this.labelRegSName.AutoSize = true;
-            this.labelRegSName.Location = new System.Drawing.Point(153, 91);
+            this.labelRegSName.Location = new System.Drawing.Point(195, 88);
             this.labelRegSName.Name = "labelRegSName";
             this.labelRegSName.Size = new System.Drawing.Size(56, 13);
             this.labelRegSName.TabIndex = 8;
@@ -92,7 +93,7 @@
             // 
             // textBoxRegSName
             // 
-            this.textBoxRegSName.Location = new System.Drawing.Point(92, 107);
+            this.textBoxRegSName.Location = new System.Drawing.Point(134, 104);
             this.textBoxRegSName.Name = "textBoxRegSName";
             this.textBoxRegSName.Size = new System.Drawing.Size(179, 20);
             this.textBoxRegSName.TabIndex = 7;
@@ -100,7 +101,7 @@
             // labelRegSurname
             // 
             this.labelRegSurname.AutoSize = true;
-            this.labelRegSurname.Location = new System.Drawing.Point(154, 130);
+            this.labelRegSurname.Location = new System.Drawing.Point(196, 127);
             this.labelRegSurname.Name = "labelRegSurname";
             this.labelRegSurname.Size = new System.Drawing.Size(54, 13);
             this.labelRegSurname.TabIndex = 6;
@@ -108,14 +109,14 @@
             // 
             // textBoxRegSurname
             // 
-            this.textBoxRegSurname.Location = new System.Drawing.Point(92, 146);
+            this.textBoxRegSurname.Location = new System.Drawing.Point(134, 143);
             this.textBoxRegSurname.Name = "textBoxRegSurname";
             this.textBoxRegSurname.Size = new System.Drawing.Size(179, 20);
             this.textBoxRegSurname.TabIndex = 5;
             // 
             // buttonRegistration
             // 
-            this.buttonRegistration.Location = new System.Drawing.Point(116, 268);
+            this.buttonRegistration.Location = new System.Drawing.Point(158, 265);
             this.buttonRegistration.Name = "buttonRegistration";
             this.buttonRegistration.Size = new System.Drawing.Size(130, 23);
             this.buttonRegistration.TabIndex = 4;
@@ -126,7 +127,7 @@
             // labelRegPass
             // 
             this.labelRegPass.AutoSize = true;
-            this.labelRegPass.Location = new System.Drawing.Point(159, 208);
+            this.labelRegPass.Location = new System.Drawing.Point(201, 205);
             this.labelRegPass.Name = "labelRegPass";
             this.labelRegPass.Size = new System.Drawing.Size(45, 13);
             this.labelRegPass.TabIndex = 3;
@@ -135,7 +136,7 @@
             // labelRegLogin
             // 
             this.labelRegLogin.AutoSize = true;
-            this.labelRegLogin.Location = new System.Drawing.Point(162, 169);
+            this.labelRegLogin.Location = new System.Drawing.Point(204, 166);
             this.labelRegLogin.Name = "labelRegLogin";
             this.labelRegLogin.Size = new System.Drawing.Size(38, 13);
             this.labelRegLogin.TabIndex = 2;
@@ -143,14 +144,14 @@
             // 
             // textBoxRegPass
             // 
-            this.textBoxRegPass.Location = new System.Drawing.Point(92, 227);
+            this.textBoxRegPass.Location = new System.Drawing.Point(134, 224);
             this.textBoxRegPass.Name = "textBoxRegPass";
             this.textBoxRegPass.Size = new System.Drawing.Size(179, 20);
             this.textBoxRegPass.TabIndex = 1;
             // 
             // textBoxRegLogin
             // 
-            this.textBoxRegLogin.Location = new System.Drawing.Point(92, 185);
+            this.textBoxRegLogin.Location = new System.Drawing.Point(134, 182);
             this.textBoxRegLogin.Name = "textBoxRegLogin";
             this.textBoxRegLogin.Size = new System.Drawing.Size(179, 20);
             this.textBoxRegLogin.TabIndex = 0;
@@ -159,13 +160,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(684, 461);
             this.Controls.Add(this.groupBoxRegistration);
+            this.MinimumSize = new System.Drawing.Size(700, 500);
             this.Name = "registrationForm";
             this.Text = "registrationForm";
             this.groupBoxRegistration.ResumeLayout(false);
             this.groupBoxRegistration.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

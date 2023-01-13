@@ -32,7 +32,11 @@ namespace TASKMANAGER
 
         private void buttonRegistration_Click(object sender, EventArgs e)
         {
-
+            registrationForm newForm = new registrationForm();
+            newForm.Show();
+            //this.Hide();
+            
         }
+        
     }
 }
