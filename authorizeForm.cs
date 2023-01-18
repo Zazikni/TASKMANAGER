@@ -27,6 +27,21 @@ namespace TASKMANAGER
             //TASKMANAGER.Program.currentUser = new ProgramUser();
             string log = textBoxAuthLogin.Text;
             string pas = textBoxAuthPass.Text;
+            bool authorizeStatus = false;
+            foreach (ProgramUser user in Program.AllCurrentUser)
+            {
+                if (user != null && log == user.Login && pas == user.Password )
+                {
+                    Program.currentUser = user;
+                    MessageBox.Show("Great");
+                    authorizeStatus = true;
+                    break;
+                }
+            }
+            if (!authorizeStatus)
+            {
+                MessageBox.Show("Ошибка авторизации");
+            }
             
         }
 

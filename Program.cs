@@ -43,8 +43,16 @@ namespace TASKMANAGER
             }
 
         }
-
-
+        //добавление текущего пользователя
+        static public void userLogin(ProgramUser user)
+        {
+            currentUser = user;
+        }
+        static public void userExit(ProgramUser user)
+        {
+            currentUser = null;
+            Application.Restart();
+        }
 
 
 
