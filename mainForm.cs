@@ -19,7 +19,7 @@ namespace TASKMANAGER
             Program.AllTasksLoading();
             ListboxRefresh();
         }
-        private void TextBoxClean()
+        private void TextBoxClear()
         {
             textBoxTaskDescription.Text = String.Empty;
         }
@@ -28,11 +28,12 @@ namespace TASKMANAGER
             
             using (StreamWriter file = new StreamWriter(@"tasks.txt", true))
             {
-                file.WriteLine($"{textBoxTaskDescription.Text};{true};{1};{Program.currentUser.UserId};{Program.currentUser.UserId}");
+                Task buff = new Task(textBoxTaskDescription.Text, true, 1, Program.currentUser.UserId, Program.currentUser.UserId);
+                file.WriteLine(buff.ToStringFormat());
             }            
             Program.AllTasksLoading();
             ListboxRefresh();
-
+            TextBoxClear();
 
         }
         private void ListboxClear()
@@ -132,6 +133,11 @@ namespace TASKMANAGER
             ListboxRefresh();
             buttonBackToInProgress.Enabled = false;
             buttonDoneDelete.Enabled = false;
+        }
+
+        private void mainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.SaveResult();
         }
     }
 }

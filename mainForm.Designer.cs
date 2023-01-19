@@ -179,6 +179,7 @@
             this.Controls.Add(this.listBoxToDo);
             this.Name = "mainForm";
             this.Text = "mainForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainForm_FormClosing);
             this.groupBoxTaskCreation.ResumeLayout(false);
             this.groupBoxTaskCreation.PerformLayout();
             this.ResumeLayout(false);

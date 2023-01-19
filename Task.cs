@@ -16,7 +16,16 @@ namespace TASKMANAGER
         private int taskOwner;
         private int taskCreator;
         private static int taskCounter;
-        
+
+        public Task(int TaskId, string TaskDescription, bool TaskVisible, int TaskStatus, int TaskOwner, int TaskCreator)
+        {
+            taskId = TaskId;
+            taskDescription = TaskDescription;
+            taskVisible = TaskVisible;
+            taskStatus = TaskStatus;
+            taskOwner = TaskOwner;
+            taskCreator = TaskCreator;
+        }
         public Task(string TaskDescription, bool TaskVisible, int TaskStatus, int TaskOwner, int TaskCreator)
         {
             taskDescription = TaskDescription;
@@ -57,9 +66,17 @@ namespace TASKMANAGER
         {
             get { return taskOwner; }
         }
+        public int TaskCreator  
+        {
+            get { return taskCreator; }
+        }
         public override string ToString()
         {
             return $"{taskDescription}";
+        }
+        public  string ToStringFormat()
+        {
+            return $"{taskId};{taskDescription};{taskVisible};{taskStatus};{taskOwner};{taskCreator}";
         }
     }
 }
