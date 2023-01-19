@@ -18,14 +18,13 @@ namespace TASKMANAGER
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new authorizeForm());
-            //Application.Run(new registrationForm());
 
         }
         static public ProgramUser currentUser; // текуший пользователь программы
         static public ProgramUser [] AllCurrentUser; // список всех пользователей для авторизации и назначения
         static public Task[] AllTasks; // список всех задач
-        static int UsersCounter = 10;
-        static int TasksCounter = UsersCounter * 100;
+        static int UsersCounter = 10; //
+        static int TasksCounter = UsersCounter * 100; //
 
         // выгружает из файла данные пользователей 
         static public void UsersListLoading()
@@ -62,6 +61,30 @@ namespace TASKMANAGER
                 }
             }
 
+        }
+        //
+        static public void ChangeStatus(int taskId, int status)
+        {
+            foreach (Task task in Program.AllTasks)
+            {
+                if (task.TaskId == taskId)
+                {
+                    task.TaskStatus = status;
+                    break;
+                }
+            }
+        }
+        //
+        static public void ChangeVisible(int taskId)
+        {
+            foreach (Task task in Program.AllTasks)
+            {
+                if (task.TaskId == taskId)
+                {
+                    task.TaskVisible = false;
+                    break;
+                }
+            }
         }
 
         //добавление текущего пользователя

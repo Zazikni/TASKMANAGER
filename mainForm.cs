@@ -29,8 +29,7 @@ namespace TASKMANAGER
             using (StreamWriter file = new StreamWriter(@"tasks.txt", true))
             {
                 file.WriteLine($"{textBoxTaskDescription.Text};{true};{1};{Program.currentUser.UserId};{Program.currentUser.UserId}");
-            }
-            TextBoxClean();
+            }            
             Program.AllTasksLoading();
             ListboxRefresh();
 
@@ -65,6 +64,74 @@ namespace TASKMANAGER
                 }
             }
 
+        }
+
+        private void listBoxToDo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxToDo.SelectedIndex != -1)
+            {
+                buttonReplaceToInProgress.Enabled = true;
+            }
+        }        
+        private void listBoxDone_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxDone.SelectedIndex != -1)
+            {
+                buttonBackToInProgress.Enabled = true;
+                buttonDoneDelete.Enabled = true;
+            }
+        }
+        private void listBoxInProgress_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxInProgress.SelectedIndex != -1)
+            {
+                buttonReplaceToDone.Enabled = true;
+                buttonBackToToDo.Enabled = true;
+            }
+
+        }
+        private void buttonReplaceToInProgress_Click(object sender, EventArgs e)
+        {
+            Task buff = (Task)listBoxToDo.SelectedItem;
+            Program.ChangeStatus(buff.TaskId, 2);
+            ListboxRefresh();
+            buttonReplaceToInProgress.Enabled = false;
+        }
+
+        private void buttonBackToToDo_Click(object sender, EventArgs e)
+        {
+            Task buff = (Task)listBoxInProgress.SelectedItem;
+            Program.ChangeStatus(buff.TaskId, 1);
+            ListboxRefresh();
+            buttonBackToToDo.Enabled = false;
+            buttonReplaceToDone.Enabled = false;
+        }
+
+        private void buttonReplaceToDone_Click(object sender, EventArgs e)
+        {
+            Task buff = (Task)listBoxInProgress.SelectedItem;
+            Program.ChangeStatus(buff.TaskId, 3);
+            ListboxRefresh();
+            buttonReplaceToDone.Enabled = false;
+            buttonBackToToDo.Enabled = false;
+        }
+
+        private void buttonBackToInProgress_Click(object sender, EventArgs e)
+        {
+            Task buff = (Task)listBoxDone.SelectedItem;
+            Program.ChangeStatus(buff.TaskId, 2);
+            ListboxRefresh();
+            buttonBackToInProgress.Enabled = false;
+            buttonDoneDelete.Enabled = false;
+        }
+
+        private void buttonDoneDelete_Click(object sender, EventArgs e)
+        {
+            Task buff = (Task)listBoxDone.SelectedItem;
+            Program.ChangeVisible(buff.TaskId);
+            ListboxRefresh();
+            buttonBackToInProgress.Enabled = false;
+            buttonDoneDelete.Enabled = false;
         }
     }
 }
