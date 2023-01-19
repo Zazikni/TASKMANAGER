@@ -33,7 +33,12 @@ namespace TASKMANAGER
                 file.WriteLine(newUser.ToString());
             }
             TextBoxClean();
-            Program.usersListLoading();
+            Program.UsersListLoading();
+            this.Close();
+        }
+
+        private void registrationForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
             this.Close();
         }
     }

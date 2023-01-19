@@ -16,15 +16,14 @@ namespace TASKMANAGER
         public authorizeForm()
         {
             InitializeComponent();
-            Program.usersListLoading();
-            labelAuthLogin.Text = Program.AllCurrentUser[0].ToString();
+            Program.UsersListLoading();
 
         }
         
 
         private void buttonAuthorize_Click(object sender, EventArgs e)
         {
-            //TASKMANAGER.Program.currentUser = new ProgramUser();
+            
             string log = textBoxAuthLogin.Text;
             string pas = textBoxAuthPass.Text;
             bool authorizeStatus = false;
@@ -32,9 +31,11 @@ namespace TASKMANAGER
             {
                 if (user != null && log == user.Login && pas == user.Password )
                 {
-                    Program.currentUser = user;
-                    MessageBox.Show("Great");
+                    Program.UserLogin(user);
                     authorizeStatus = true;
+                    mainForm mForm = new mainForm();
+                    mForm.ShowDialog();
+                    this.Hide();
                     break;
                 }
             }
@@ -45,10 +46,10 @@ namespace TASKMANAGER
             
         }
 
-        private void buttonRegistration_Click(object sender, EventArgs e)
+        public  void buttonRegistration_Click(object sender, EventArgs e)
         {
-            registrationForm newForm = new registrationForm();
-            newForm.Show();
+            registrationForm regForm = new registrationForm();
+            regForm.Show();
             //this.Hide();
             
         }

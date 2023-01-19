@@ -58,6 +58,7 @@
     <Compile Include="mainForm.Designer.cs">
       <DependentUpon>mainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyApplicationContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProgramUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,7 +103,7 @@
   <ItemGroup>
     <Content Include="nextId.txt" />
     <Content Include="nextTaskId.txt" />
-    <Content Include="TextFile1.txt" />
+    <Content Include="tasks.txt" />
     <Content Include="users.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
