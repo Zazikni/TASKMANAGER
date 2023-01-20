@@ -40,7 +40,7 @@ namespace TASKMANAGER
             }
             using (StreamWriter file = new StreamWriter(@"nextTaskId.txt", false))
             {
-                file.Write(++taskId);
+                file.Write(taskId+1);
             }
             
         }

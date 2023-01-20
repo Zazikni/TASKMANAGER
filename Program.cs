@@ -53,12 +53,16 @@ namespace TASKMANAGER
             {
                 string line;
                 int i = 0;
-                while ((line = file.ReadLine()) != null)
+                while ((line = file.ReadLine()) != null && line != string.Empty)
                 {
 
-                    string[] linemass = line.Split(';');
-                    Program.AllTasks[i] = new Task(Convert.ToInt32(linemass[0])/*Id задачи*/, linemass[1]/*Описание*/, Convert.ToBoolean(linemass[2])/*Видимость*/, Convert.ToInt32(linemass[3])/*Статус*/, Convert.ToInt32(linemass[4])/*Исполнитель*/, Convert.ToInt32(linemass[5])/*Создатель*/);
-                    i++;
+                        string[] linemass = line.Split(';');
+                        Program.AllTasks[i] = new Task(Convert.ToInt32(linemass[0])/*Id задачи*/, linemass[1]/*Описание*/, Convert.ToBoolean(linemass[2])/*Видимость*/, Convert.ToInt32(linemass[3])/*Статус*/, Convert.ToInt32(linemass[4])/*Исполнитель*/, Convert.ToInt32(linemass[5])/*Создатель*/);
+                        i++;
+
+
+
+                    
                 }
             }
 
@@ -103,19 +107,21 @@ namespace TASKMANAGER
         static private string[] TaskStringMassive()
         {
             int i = 0;
-            string[] result = new string[TasksCounter];
+            var listOfStrings = new List<string>();
             foreach (Task task in AllTasks)
             {
                 if (task != null)
                 {
-                    result[i] = task.ToStringFormat();
+                    
+                   listOfStrings.Add(task.ToStringFormat());
                     i++;
                 }
                 else
-                {
+                {   
                     break;
                 }
             }
+            string[] result = listOfStrings.ToArray();
             return result;
         }
         // сохранение результатов работы программы

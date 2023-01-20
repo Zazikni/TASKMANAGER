@@ -25,7 +25,8 @@ namespace TASKMANAGER
         }
         private void buttonAddTask_Click(object sender, EventArgs e)
         {
-            
+            Program.SaveResult();
+
             using (StreamWriter file = new StreamWriter(@"tasks.txt", true))
             {
                 Task buff = new Task(textBoxTaskDescription.Text, true, 1, Program.currentUser.UserId, Program.currentUser.UserId);
