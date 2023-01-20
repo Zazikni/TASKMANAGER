@@ -165,6 +165,7 @@
             this.MinimumSize = new System.Drawing.Size(700, 500);
             this.Name = "registrationForm";
             this.Text = "registrationForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.registrationForm_FormClosing);
             this.groupBoxRegistration.ResumeLayout(false);
             this.groupBoxRegistration.PerformLayout();
             this.ResumeLayout(false);

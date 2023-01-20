@@ -75,7 +75,7 @@ namespace TASKMANAGER
         }
         public override string ToString()
         {
-            return $"{userId} {userFirstName} {userSecondName} {userSurname} {login} {password}";
+            return $"{userSecondName} {userFirstName}  {userSurname}";
         }
 
 

@@ -20,22 +20,31 @@ namespace TASKMANAGER
 
         }
         
-
+        private void TextBoxClear()
+        {
+            textBoxAuthLogin.Text = string.Empty;   
+            textBoxAuthPass.Text = string.Empty;
+        }
         private void buttonAuthorize_Click(object sender, EventArgs e)
         {
             
             string log = textBoxAuthLogin.Text;
             string pas = textBoxAuthPass.Text;
+            
             bool authorizeStatus = false;
             foreach (ProgramUser user in Program.AllCurrentUser)
             {
                 if (user != null && log == user.Login && pas == user.Password )
                 {
+                    TextBoxClear();
                     Program.UserLogin(user);
                     authorizeStatus = true;
                     mainForm mForm = new mainForm();
-                    mForm.ShowDialog();
+                    mForm.Show(this);
                     this.Hide();
+                    
+
+
                     break;
                 }
             }
@@ -49,8 +58,8 @@ namespace TASKMANAGER
         public  void buttonRegistration_Click(object sender, EventArgs e)
         {
             registrationForm regForm = new registrationForm();
-            regForm.Show();
-            //this.Hide();
+            regForm.Show(this);
+            this.Hide();
             
         }
         

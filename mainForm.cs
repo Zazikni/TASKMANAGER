@@ -18,6 +18,7 @@ namespace TASKMANAGER
             InitializeComponent();
             Program.AllTasksLoading();
             ListboxRefresh();
+            labelUserInfo.Text = Program.currentUser.ToString();
         }
         private void TextBoxClear()
         {
@@ -139,6 +140,10 @@ namespace TASKMANAGER
         private void mainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Program.SaveResult();
+            this.Owner.Show();
+            //Program.currentUser = null;
+            //Program.AllTasks = null;
+            
         }
     }
 }

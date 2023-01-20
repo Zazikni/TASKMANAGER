@@ -37,9 +37,9 @@ namespace TASKMANAGER
             this.Close();
         }
 
-        private void registrationForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void registrationForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Close();
+            this.Owner.Show();
         }
     }
 }
